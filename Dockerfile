@@ -15,3 +15,6 @@ VOLUME [ "/app/dbdata", "/app/files" ]
 WORKDIR /app
 ENV WUZAPI_ADMIN_TOKEN SetToRandomAndSecureTokenForAdminTasks
 CMD [ "/app/server", "-logtype", "json" ]
+
+# docker build -t wuzapi . && docker run --name wuzapi_container --restart always -d -p 5001:5001 wuzapi
+# docker stop wuzapi_container && docker rm wuzapi_container && docker rmi wuzapi
